@@ -264,14 +264,74 @@ public class calculator {
         System.out.println(ANSI_GREEN + result + ANSI_RESET);
     }
 
-    // Driver - - - - - - - - - - - - - - - - - - - -
+    /* static void SimplestRadicalForm() {
+        double result;
+        double input = 0.0;
+        Scanner cr = new Scanner(System.in);
+        boolean valid = false;
 
+        while (!valid) {
+            System.out.println(ANSI_CYAN + "\nEnter the number you want to calculate the cube root(Numbers only)" + ANSI_RESET);
+            try {
+                input = cr.nextInt();
+                valid = true;
+                // catches the mismatch exception, so it will only take int input. If letter
+                // return Not a number
+            } catch (InputMismatchException e) {
+                System.out.println("Not a number.");
+                return;
+            }
+        }
+        //main check
+        result = java.lang.Math.cbrt(input);
+        System.out.println(ANSI_GREEN + result + ANSI_RESET);
+    }
+*/
+    static void Add() {
+        int terms = 0;
+        double input = 0.0;
+        Scanner add = new Scanner(System.in);
+        boolean valid = false;
+        double answer = 0;
+        int i = 0;
+        int arrayNumber = 0;
+
+        System.out.println(ANSI_CYAN + "Input the amount of terms you want to calculate" + ANSI_RESET);
+        terms = add.nextInt();
+
+        int[] numbersInput = new int[terms];
+
+        while (i <= terms) {
+
+            while (!valid) {
+                System.out.println(ANSI_CYAN + "\nEnter the next term of the number you want to calculate(Numbers only)" + ANSI_RESET);
+                try {
+                    input = add.nextInt();
+                    valid = true;
+                    i++;
+                    arrayNumber++;
+                    numbersInput[arrayNumber] = (int) input;
+                    // catches the mismatch exception, so it will only take int input. If letter
+                    // return Not a number
+                } catch (InputMismatchException e) {
+                    System.out.println("Not a number.");
+                    return;
+                }
+            }
+        }
+
+
+        //main check
+        System.out.println("The sum of all the numbers is " + answer);
+
+        // Driver - - - - - - - - - - - - - - - - - - - -
+    }
 
 
     public static void main(String[] args) {
         do {
             Scanner choiceScanner = new Scanner(System.in);
-            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Factor/GCF/SQR/PS/Quad)" + "\nFactor = Find the factor of a number" + "\nGCF = Find the greatest common factor of a number" + "\nSQR = Find the square root of a number" + "\nPS = Check if the number is a perfect square" + "\nQuad = Solve a quadratic equation" + "\nExpo = Evaluate the given exponent" + "\nFac = Factorial of a given number" + "CR = Cube root of a given number"+ ANSI_RESET);
+            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Factor/GCF/SQR/PS/Quad)" + "\nFactor = Find the factor of a number" + "\nGCF = Find the greatest common factor of a number" + "\nSQR = Find the square root of a number" + "\nPS = Check if the number is a perfect square" + "\nQuad = Solve a quadratic equation" + "\nExpo = Evaluate the given exponent" + "\nFac = Factorial of a given number" + "\nCR = Cube root of a given number"+ ANSI_RESET);
             String answer = choiceScanner.nextLine();
             // if the input is y, set repeat program to true otherwise exit
             if (answer.equalsIgnoreCase("Factor")) {
@@ -303,6 +363,9 @@ public class calculator {
             }
             if (answer.equalsIgnoreCase("CR")) {
                 CR();
+            }
+            if (answer.equalsIgnoreCase("Add")) {
+                Add();
             }
             else {
                 System.out.println("\nThe choice you entered is invalid. Pick one from below");
