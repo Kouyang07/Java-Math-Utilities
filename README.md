@@ -22,3 +22,5 @@ CR = Cube root of a given number
 SC = Simple calculator to calculate simple 2 term equations
 
 DOTS = Difference Between Two Squares
+
+AVG = The average of a set of numbers
