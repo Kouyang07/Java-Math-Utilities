@@ -1,6 +1,6 @@
 import java.util.*;
-import java.io.*;
 import java.lang.*;
+import java.io.*;
 
 public class Main {
     public static final String ANSI_RESET = "\u001B[0m";
@@ -12,71 +12,84 @@ public class Main {
     public static final String ANSI_CYAN = "\u001B[36m";
     static Scanner sc = new Scanner(System.in);
     public static Boolean repeat = false;
+
     public static void main(String[] args) {
         do {
             System.out.println(
-                    ANSI_PURPLE + "Do you want advanced mode or simple mode?" + "\nSimple = Able to pick specific operations"
-                            + "\nAdv = calculate based on arguments(WIP AND DOESN'T WORK)" + ANSI_RESET);
+                    ANSI_PURPLE + "Do you want statics mode or algebra mode?" + "\nAlgebra = Sets of calculator for Algebra problems"
+                            + "\nStat = Sets of statistic calculators" + ANSI_RESET);
             String mainChoice = sc.nextLine();
-            if (mainChoice.equalsIgnoreCase("Simple")) {
-                SimpleMode();
-            } else if (mainChoice.equalsIgnoreCase("Adv")) {
-                calculator.advancedMode();
+            if (mainChoice.equalsIgnoreCase("Algebra")) {
+                algebraMethods();
+            } else if (mainChoice.equalsIgnoreCase("Stat")) {
+                statisticMethods();
             } else {
                 System.out.println("The choices you entered is invalid. Pick simple or adv");
             }
         } while (true);
     }
-    static void SimpleMode() {
+
+    static void algebraMethods() {
         do {
-            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Factor/GCF/SQR/PS/Quad)"
+            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Factor/GCF/SQR/PS/Quad/CR/SC/DOTS)"
                     + "\nFactor = Find the factor of a number" + "\nGCF = Find the greatest common factor of a number"
-                    + "\nSQR = Find the square root of a number" + "\nPS = Check if the number is a perfect square"
+                    + "\nSQR = Find the square root of a number" + "\nPS = Check if the number is a perfect square and return the square root"
                     + "\nQuad = Solve a quadratic equation" + "\nExpo = Evaluate the given exponent"
-                    + "\nFac = Factorial of a given number" + "\nCR = Cube root of a given number" + "\nSC = Simple calculator to calculate simple 2 term equations" + "\nDOTS = Difference Between Two Squares" + ANSI_RESET);
+                    + "\nFac = Factorial of a given number"
+                    + "\nCR = Cube root of a given number" + "\nSC = Simple calculator to calculate simple 2 term equations"
+                    + "\nDOTS = Difference Between Two Squares" + ANSI_RESET);
             String answer = sc.nextLine();
             // if the input is y, set repeat program to true otherwise exit
             if (answer.equalsIgnoreCase("Factor")) {
-                calculator.factorFinder();
+                algebraMethods.factorFinder();
                 repeat = true;
             }
             if (answer.equalsIgnoreCase("GCF")) {
-                calculator.GCFfinder();
+                algebraMethods.GCFfinder();
                 repeat = true;
             }
             if (answer.equalsIgnoreCase("SQR")) {
-                calculator.squareRoot();
+                algebraMethods.squareRoot();
                 repeat = true;
             }
             if (answer.equalsIgnoreCase("PS")) {
-                calculator.PerfectSquare();
+                algebraMethods.PerfectSquare();
                 repeat = true;
             }
             if (answer.equalsIgnoreCase("Expo")) {
-                calculator.exponent();
+                algebraMethods.exponent();
                 repeat = true;
             }
             if (answer.equalsIgnoreCase("Quad")) {
-                calculator.quadratic();
+                algebraMethods.quadratic();
                 repeat = true;
             }
             if (answer.equalsIgnoreCase("Fac")) {
-                calculator.Fac();
+                algebraMethods.Fac();
             }
             if (answer.equalsIgnoreCase("CR")) {
-                calculator.CR();
+                algebraMethods.CR();
             }
             if (answer.equalsIgnoreCase("SC")) {
-                calculator.SC();
+                algebraMethods.SC();
             }
-            if (answer.equalsIgnoreCase("DOTS")){
-                calculator.DOTS();
-            }
-            else {
+            if (answer.equalsIgnoreCase("DOTS")) {
+                algebraMethods.DOTS();
+            } else {
                 System.out.println("\nThe choice you entered is invalid. Pick one from below");
             }
             repeat = true;
         } while (true);
     }
+
+    static void statisticMethods() {
+        do {
+            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Avg)" + "\nAvg = Find the factor of a set of number" + ANSI_RESET);
+            String answer = sc.nextLine();
+            if (answer.equalsIgnoreCase("avg")){
+                statisticMethods.average();
+            }
+        } while (true);
     }
+}
 
