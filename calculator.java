@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 import java.lang.*;
 
 public class calculator {
@@ -12,10 +13,11 @@ public class calculator {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static Boolean repeat = false;
 
+    static Scanner sc = new Scanner(System.in);
+
     // Factor finer method - - - - - - - - - - - - - - - -
 
     static void factorFinder() {
-        Scanner sc = new Scanner(System.in);
         boolean valid = false;
         int number = 0;
 
@@ -43,7 +45,7 @@ public class calculator {
     }
 
     static void GCFfinder() {
-        Scanner gcff = new Scanner(System.in);
+
         boolean valid = false;
         int gcf1 = 0;
         int gcf2 = 0;
@@ -52,21 +54,21 @@ public class calculator {
         while (!valid) {
             System.out.println(ANSI_CYAN + "\nEnter the first number you want to find the GCF of(Numbers only)" + ANSI_RESET);
             try {
-                gcf1 = gcff.nextInt();
+                gcf1 = sc.nextInt();
                 valid = true;
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
                 System.out.println("Not a number.");
-                gcff.next();
+                sc.next();
             }
             System.out.println(ANSI_CYAN + "\nEnter the second number you want to find the GCF of" + ANSI_RESET);
             try {
-                gcf2 = gcff.nextInt();
+                gcf2 = sc.nextInt();
                 valid = true;
             } catch (InputMismatchException e) {
                 System.out.println("Not a number");
-                gcff.next();
+                sc.next();
             }
         }
         for (int i = 1; i <= gcf1 && i <= gcf2; i++) {
@@ -80,7 +82,6 @@ public class calculator {
     }
 
     static void squareRoot() {
-        Scanner sq = new Scanner(System.in);
         int sqMain = 0;
         boolean valid = false;
 
@@ -88,20 +89,19 @@ public class calculator {
             System.out
                     .println(ANSI_CYAN + "\nEnter the number you want to find the square root of(Numbers only)" + ANSI_RESET);
             try {
-                sqMain = sq.nextInt();
+                sqMain = sc.nextInt();
                 valid = true;
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
                 System.out.println("Not a number.");
-                sq.next();
+                sc.next();
             }
         }
         System.out.println(Math.sqrt(sqMain));
     }
 
     static void PerfectSquare() {
-        Scanner ps = new Scanner(System.in);
         int num2check = 0;
         boolean valid = false;
 
@@ -109,63 +109,62 @@ public class calculator {
             System.out
                     .println(ANSI_CYAN + "\nEnter the number you want to check if square root(Numbers only)" + ANSI_RESET);
             try {
-                num2check = ps.nextInt();
+                num2check = sc.nextInt();
                 valid = true;
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
                 System.out.println("Not a number.");
-                ps.next();
+                sc.next();
             }
         }
-        //main check
+        // main check
         int sqrt = (int) Math.sqrt(num2check);
         if (sqrt * sqrt == num2check) {
-            System.out.println(ANSI_GREEN + num2check + " is a perfect square number!" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + num2check + " is a perfect square number! Its square is " + sqrt + ANSI_RESET);
         } else {
             System.out.println(ANSI_GREEN + num2check + " is NOT a perfect square number!" + ANSI_RESET);
         }
     }
+
     static void quadratic() {
-        Scanner quad = new Scanner(System.in);
         boolean valid = false;
         double a = 0;
         double b = 0;
         double c = 0;
 
-
-
         while (!valid) {
-            System.out.println(ANSI_CYAN + "\nEnter the A term of the quadratic equation(Numbers only ignore the X, exponent and signs)" + ANSI_RESET);
+            System.out.println(ANSI_CYAN
+                    + "\nEnter the A term of the quadratic equation(Numbers only ignore the X, exponent and signs)" + ANSI_RESET);
             try {
                 System.out.println("Enter term A");
-                a = quad.nextDouble();
+                a = sc.nextDouble();
                 valid = true;
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
                 System.out.println("Not a number.");
-                quad.next();
+                sc.next();
             }
             try {
                 System.out.println("Enter term B");
-                b = quad.nextDouble();
+                b = sc.nextDouble();
                 valid = true;
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
                 System.out.println("Not a number.");
-                quad.next();
+                sc.next();
             }
             try {
                 System.out.println("Enter term C");
-                c = quad.nextDouble();
+                c = sc.nextDouble();
                 valid = true;
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
                 System.out.println("Not a number.");
-                quad.next();
+                sc.next();
             }
             double d = b * b - 4.0 * a * c;
             if (d > 0.0) {
@@ -180,8 +179,8 @@ public class calculator {
             }
         }
     }
+
     static void exponent() {
-        Scanner expo = new Scanner(System.in);
         long base = 0;
         long exponent = 0;
         long result;
@@ -190,42 +189,41 @@ public class calculator {
         while (!valid) {
             System.out.println(ANSI_CYAN + "\nEnter the base of the number(Number only)" + ANSI_RESET);
             try {
-                base = expo.nextLong();
+                base = sc.nextLong();
                 valid = true;
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
                 System.out.println("Not a number.");
-                expo.next();
+                sc.next();
             }
             try {
                 System.out.println(ANSI_CYAN + "\nEnter the power of the number(Number only)" + ANSI_RESET);
-                exponent = expo.nextLong();
+                exponent = sc.nextLong();
                 valid = true;
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
                 System.out.println("Not a number.");
-                expo.next();
+                sc.next();
             }
         }
-        //main check
-        result= (long) Math.pow(base, exponent);
-        System.out.println("result = "+result);
+        // main check
+        result = (long) Math.pow(base, exponent);
+        System.out.println("result = " + result);
 
     }
 
     static void Fac() {
         int fac = 0;
         int i, fact = 1;
-        Scanner factorial = new Scanner(System.in);
         boolean valid = false;
 
         while (!valid) {
             System.out
                     .println(ANSI_CYAN + "\nEnter the number you want to calculate the factorial of(Numbers only)" + ANSI_RESET);
             try {
-                fac = factorial.nextInt();
+                fac = sc.nextInt();
                 valid = true;
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
@@ -234,23 +232,23 @@ public class calculator {
                 return;
             }
         }
-        //main check
-        for(i=1;i<=fac;i++)
-        {
-            fact=fact*i;
+        // main check
+        for (i = 1; i <= fac; i++) {
+            fact = fact * i;
         }
-        System.out.println(ANSI_GREEN + "Factorial of "+fac+" is: "+fact + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "Factorial of " + fac + " is: " + fact + ANSI_RESET);
     }
+
     static void CR() {
         double result;
         double input = 0.0;
-        Scanner cr = new Scanner(System.in);
         boolean valid = false;
 
         while (!valid) {
-            System.out.println(ANSI_CYAN + "\nEnter the number you want to calculate the cube root(Numbers only)" + ANSI_RESET);
+            System.out
+                    .println(ANSI_CYAN + "\nEnter the number you want to calculate the cube root(Numbers only)" + ANSI_RESET);
             try {
-                input = cr.nextInt();
+                input = sc.nextInt();
                 valid = true;
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
@@ -259,21 +257,111 @@ public class calculator {
                 return;
             }
         }
-        //main check
+        // main check
         result = java.lang.Math.cbrt(input);
         System.out.println(ANSI_GREEN + result + ANSI_RESET);
     }
 
-    /* static void SimplestRadicalForm() {
-        double result;
-        double input = 0.0;
-        Scanner cr = new Scanner(System.in);
+    static void SC() {
+        // stores two numbers
+        double num1, num2;
+
+        System.out.println("Enter the first number");
+
+        // take the inputs
+        num1 = sc.nextDouble();
+
+        System.out.println("Enter the second number");
+
+        num2 = sc.nextDouble();
+
+        System.out.println("Enter the operator (+,-,*,/)");
+
+        char op = sc.next().charAt(0);
+
+        double o = 0;
+
+        switch (op) {
+
+            // case to add two numbers
+            case '+':
+
+                o = num1 + num2;
+
+                break;
+
+            // case to subtract two numbers
+            case '-':
+
+                o = num1 - num2;
+
+                break;
+
+            // case to multiply two numbers
+            case '*':
+
+                o = num1 * num2;
+
+                break;
+
+            // case to divide two numbers
+            case '/':
+
+                o = num1 / num2;
+
+                break;
+
+            default:
+
+                System.out.println("You enter wrong input");
+
+                break;
+        }
+
+        System.out.println("The answer is:");
+
+        System.out.println();
+
+        // print the final result
+        System.out.println(num1 + " " + op + " " + num2
+                + " = " + o);
+    }
+
+    static void DOTS() {
         boolean valid = false;
+        int term1 = 0;
+        int term2 = 0;
+        String numVari = "x";
+
+        System.out
+                .println(ANSI_CYAN + "\nBefore you use this, make sure the sign between the 2 terms are -)" + ANSI_RESET);
 
         while (!valid) {
-            System.out.println(ANSI_CYAN + "\nEnter the number you want to calculate the cube root(Numbers only)" + ANSI_RESET);
             try {
-                input = cr.nextInt();
+                System.out.println(ANSI_CYAN + "\nEnter the variable(s) of the binomial" + ANSI_RESET);
+                numVari = sc.nextLine();
+                valid = true;
+                // catches the mismatch exception, so it will only take int input. If letter
+                // return Not a number
+            } catch (InputMismatchException e) {
+                System.out.println("Not a number.");
+                return;
+            }
+            System.out
+                    .println(ANSI_CYAN + "\nEnter the first term of the dot(No exponent or variable, number only)" + ANSI_RESET);
+            try {
+                term1 = sc.nextInt();
+                valid = true;
+                // catches the mismatch exception, so it will only take int input. If letter
+                // return Not a number
+            } catch (InputMismatchException e) {
+                System.out.println("Not a number.");
+                return;
+            }
+            try {
+                System.out
+                        .println(ANSI_CYAN + "\nEnter the second term of the dot(No exponent or variable, number only)" + ANSI_RESET);
+                term2 = sc.nextInt();
                 valid = true;
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
@@ -282,95 +370,17 @@ public class calculator {
                 return;
             }
         }
-        //main check
-        result = java.lang.Math.cbrt(input);
-        System.out.println(ANSI_GREEN + result + ANSI_RESET);
-    }
-*/
-    static void Add() {
-        int terms = 0;
-        double input = 0.0;
-        Scanner add = new Scanner(System.in);
-        boolean valid = false;
-        double answer = 0;
-        int i = 0;
-        int arrayNumber = 0;
-
-        System.out.println(ANSI_CYAN + "Input the amount of terms you want to calculate" + ANSI_RESET);
-        terms = add.nextInt();
-
-        int[] numbersInput = new int[terms];
-
-        while (i <= terms) {
-
-            while (!valid) {
-                System.out.println(ANSI_CYAN + "\nEnter the next term of the number you want to calculate(Numbers only)" + ANSI_RESET);
-                try {
-                    input = add.nextInt();
-                    valid = true;
-                    i++;
-                    arrayNumber++;
-                    numbersInput[arrayNumber] = (int) input;
-                    // catches the mismatch exception, so it will only take int input. If letter
-                    // return Not a number
-                } catch (InputMismatchException e) {
-                    System.out.println("Not a number.");
-                    return;
-                }
-            }
-        }
-
-
-        //main check
-        System.out.println("The sum of all the numbers is " + answer);
-
-        // Driver - - - - - - - - - - - - - - - - - - - -
+        //calculation
+        double term1f = Math.sqrt(term1);
+        double term2f = Math.sqrt(term2);
+        System.out.println(ANSI_GREEN + "(" + numVari + "+" + term1f + ")" + "(" + numVari + "-" + term2f + ")" + ANSI_RESET);
     }
 
 
-    public static void main(String[] args) {
-        do {
-            Scanner choiceScanner = new Scanner(System.in);
-            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Factor/GCF/SQR/PS/Quad)" + "\nFactor = Find the factor of a number" + "\nGCF = Find the greatest common factor of a number" + "\nSQR = Find the square root of a number" + "\nPS = Check if the number is a perfect square" + "\nQuad = Solve a quadratic equation" + "\nExpo = Evaluate the given exponent" + "\nFac = Factorial of a given number" + "\nCR = Cube root of a given number"+ ANSI_RESET);
-            String answer = choiceScanner.nextLine();
-            // if the input is y, set repeat program to true otherwise exit
-            if (answer.equalsIgnoreCase("Factor")) {
-                factorFinder();
-                repeat = true;
-            }
-            if (answer.equalsIgnoreCase("GCF")) {
-                GCFfinder();
-                repeat = true;
-            }
-            if (answer.equalsIgnoreCase("SQR")) {
-                squareRoot();
-                repeat = true;
-            }
-            if (answer.equalsIgnoreCase("PS")) {
-                PerfectSquare();
-                repeat = true;
-            }
-            if (answer.equalsIgnoreCase("Expo")) {
-                exponent();
-                repeat = true;
-            }
-            if (answer.equalsIgnoreCase("Quad")) {
-                quadratic();
-                repeat = true;
-            }
-            if (answer.equalsIgnoreCase("Fac")) {
-                Fac();
-            }
-            if (answer.equalsIgnoreCase("CR")) {
-                CR();
-            }
-            if (answer.equalsIgnoreCase("Add")) {
-                Add();
-            }
-            else {
-                System.out.println("\nThe choice you entered is invalid. Pick one from below");
-            }
-            repeat = true;
-        } while (true);
+    static void advancedMode() {
+
+
+
+        System.out.println("This doesn't work yet, pick simple mode");
     }
 }
