@@ -41,26 +41,26 @@ public class statisticMethods {
     }
 
     static void standardDeviation() {
-	System.out.println("Enter the total amount of numbers you want to find the mean and SD for"); 
-	int n=sc.nextInt();
-	double[] input=new double[n];
-	double sum=0,mean;
-	System.out.println("enter " + n + " numbers");	
-	for(int i=0;i<n;i++) 
-	{
-		input[i]=sc.nextDouble();
-		sum=sum+input[i];
-	}
-       	mean=sum/n;
-       	System.out.println("Mean :"+mean);
-	sum=0;  
-	for(int i=0;i<n;i++) 
-	{
-		sum+=Math.pow((input[i]-mean),2);
-	}
-	mean=sum/(n-1);
-	double deviation=Math.sqrt(mean);
-	System.out.println("standard deviation :"+deviation);
-   }
+        System.out.println("Enter the total amount of numbers you want to find the mean and SD for");
+        int n=sc.nextInt();
+        double[] input=new double[n];
+        double sum=0,mean;
+        System.out.println("enter " + n + " numbers");
+        for(int i=0;i<n;i++)
+        {
+            input[i]=sc.nextDouble();
+            sum=sum+input[i];
+        }
+        mean=sum/n;
+        System.out.println("Mean :"+mean);
+        sum=0;
+        for(int i=0;i<n;i++)
+        {
+            sum+=Math.pow((input[i]-mean),2);
+        }
+        mean=sum/(n-1);
+        double deviation=Math.sqrt(mean);
+        System.out.println("standard deviation :"+deviation);
+    }
 
 }
