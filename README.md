@@ -24,3 +24,7 @@ SC = Simple calculator to calculate simple 2 term equations
 DOTS = Difference Between Two Squares
 
 AVG = The average of a set of numbers
+
+MSD = Calculates the mean and the average deviation of a set of numbers
+
+COS = Calculates the cosine of a given number
