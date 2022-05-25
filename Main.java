@@ -84,10 +84,13 @@ public class Main {
 
     static void statisticMethods() {
         do {
-            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Avg)" + "\nAvg = Find the factor of a set of number" + ANSI_RESET);
+            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Avg)" + "\nAvg = Find the factor of a set of number" + "\nMSD = Calculates the mean and the standard deviation of a set of numbers" + ANSI_RESET);
             String answer = sc.nextLine();
             if (answer.equalsIgnoreCase("avg")){
                 statisticMethods.average();
+            } 
+            if (answer.equalsIgnoreCase("MSD")){
+                statisticMethods.standardDeviation();
             }
         } while (true);
     }
