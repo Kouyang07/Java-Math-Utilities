@@ -1,4 +1,4 @@
-# Java-calculators
+# Java-Math-Utilities
 A set of java utilities that are created to help you solve the most daunting task in any math courses. If you have any questions or have suggestion or anything, contact me at Croticalism#2711 on discord. :D
 
 --CURRENT AVAILABLE TOOLS--
