@@ -178,13 +178,13 @@ public class algebraMethods {
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
                 sc.next();
             }
         }
         // main check
         result = (long) Math.pow(base, exponent);
-        System.out.println("result = " + result);
+        System.out.println(ANSI_PURPLE + "result = " + result + ANSI_RESET);
 
     }
 
@@ -203,7 +203,7 @@ public class algebraMethods {
                 // return Not a number
             } catch (InputMismatchException e) {
                 System.out.println("Not a number.");
-                return;
+                sc.next();
             }
         }
         // main check
@@ -228,7 +228,7 @@ public class algebraMethods {
                 // return Not a number
             } catch (InputMismatchException e) {
                 System.out.println("Not a number.");
-                return;
+                sc.next();
             }
         }
         // main check
@@ -238,20 +238,46 @@ public class algebraMethods {
 
     static void SC() {
         // stores two numbers
-        double num1, num2;
-
-        System.out.println("Enter the first number");
-
-        // take the inputs
-        num1 = sc.nextDouble();
-
-        System.out.println("Enter the second number");
-
-        num2 = sc.nextDouble();
-
-        System.out.println("Enter the operator (+,-,*,/)");
-
-        char op = sc.next().charAt(0);
+        double num1 = 0.0;
+        double num2 = 0.0;
+        boolean valid = false;
+        char op = 0;
+        while (!valid) {
+            try {
+                System.out.println("Enter the first number");
+                num1 = sc.nextInt();
+                valid = true;
+                // catches the mismatch exception so it will only take int input. If letter
+                // return Not a number
+            } catch (InputMismatchException e) {
+                System.out.println("Not a number.");
+                sc.next();
+            }
+        }
+        while (!valid) {
+            try {
+                System.out.println("Enter the second number");
+                num2 = sc.nextInt();
+                valid = true;
+                // catches the mismatch exception so it will only take int input. If letter
+                // return Not a number
+            } catch (InputMismatchException e) {
+                System.out.println("Not a number.");
+                sc.next();
+            }
+        }
+        while (!valid) {
+            try {
+                System.out.println("Enter the operator (+,-,*,/)");
+                op = sc.next().charAt(0);
+                valid = true;
+                // catches the mismatch exception so it will only take int input. If letter
+                // return Not a number
+            } catch (InputMismatchException e) {
+                System.out.println("Not a number.");
+                sc.next();
+            }
+        }
 
         double o = 0;
 

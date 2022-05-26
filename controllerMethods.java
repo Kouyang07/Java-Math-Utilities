@@ -1,6 +1,5 @@
 import java.util.*;
 import java.lang.*;
-import java.io.*;
 
 public class controllerMethods {
     public static final String ANSI_RESET = "\u001B[0m";
@@ -17,7 +16,7 @@ public class controllerMethods {
         do {
             System.out.println(
                     ANSI_PURPLE + "Do you want statics mode or algebra mode?" + "\nAlgebra = Sets of calculator for Algebra problems"
-                            + "\nStat = Sets of statistic calculators" + "\nTrig = Sets of Trigonometry calculators" + "\nInfo = Information on stuff you probably can't remember" + ANSI_RESET);
+                            + "\nStat = Sets of statistic calculators" + "\nTrig = Sets of Trigonometry calculators" + "\nMisc = Random misc stuff" + "\nList = If you want to list all of the methods that are available"+ ANSI_RESET);
             String mainChoice = sc.nextLine();
             if (mainChoice.equalsIgnoreCase("Algebra")) {
                 algebraMethods();
@@ -25,10 +24,13 @@ public class controllerMethods {
                 statisticMethods();
             } else if (mainChoice.equalsIgnoreCase("trig")){
                 trigonometryMethods();
-            } else if (mainChoice.equalsIgnoreCase("Info")) {
-                infoChecks();
-            } else {
-                System.out.println("The choices you entered is invalid. Pick Algebra or Stat or Trig or Info");
+            } else if (mainChoice.equalsIgnoreCase("Misc")) {
+                misc();
+            }  else if (mainChoice.equalsIgnoreCase("List")) {
+                list();
+            }
+            else {
+                System.out.println(ANSI_RED + "The choice you entered is invalid. Pick Algebra or Stat or Trig or Misc" + ANSI_RESET);
             }
         } while (true);
     }
@@ -75,7 +77,7 @@ public class controllerMethods {
                 mainMethod();
             }
             else {
-                System.out.println("\nThe choice you entered is invalid. Pick one from below");
+                System.out.println(ANSI_RED + "\nThe choice you entered is invalid. Pick one from below" + ANSI_RESET);
             }
             repeat = true;
         } while (true);
@@ -113,19 +115,57 @@ public class controllerMethods {
         } while (true);
     }
 
-    static void infoChecks() {
+    static void misc() {
         do {
-            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Avg)" + "\nPI = Shows PI" + "\nPS = Checks if a number is perfect square"+ ANSI_RESET);
+            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Avg/PI/PS/RNG)" + "\nPI = Shows PI" + "\nPS = Checks if a number is perfect square"+ "\nRNG = Random Number Generator" + "\nMain = Return to the main menu" + ANSI_RESET);
             String answer = sc.nextLine();
             if (answer.equalsIgnoreCase("PI")){
-                infoChecks.pi();
+                misc.pi();
             }
             if (answer.equalsIgnoreCase("PS")){
-                infoChecks.PerfectSquare();
+                misc.PerfectSquare();
             }
             if (answer.equalsIgnoreCase("Main")){
                 mainMethod();
             }
+            if (answer.equalsIgnoreCase("RNG")) {
+                misc.RNG();
+            }
         } while (true);
+    }
+
+    static void list() {
+        System.out.println(ANSI_BLUE + "--CURRENT AVAILABLE TOOLS--\n" +
+                "\n" +
+                "Algebra - Factor = Find the factor of a number\n" +
+                "\n" +
+                "Algebra - GCF = Find the greatest common factor of a number\n" +
+                "\n" +
+                "Algebra - SQR = Find the square root of a number\n" +
+                "\n" +
+                "Algebra - Quad = Solve a quadratic equation\n" +
+                "\n" +
+                "Algebra - Expo = Evaluate the given exponent\n" +
+                "\n" +
+                "Algebra - Fac = Factorial of a given number\n" +
+                "\n" +
+                "Algebra - CR = Cube root of a given number\n" +
+                "\n" +
+                "Algebra - SC = Simple calculator to calculate simple 2 term equations\n" +
+                "\n" +
+                "Algebra - DOTS = Difference Between Two Squares\n" +
+                "\n" +
+                "Stat - AVG = The average of a set of numbers\n" +
+                "\n" +
+                "Stat - MSD = Calculates the mean and the average deviation of a set of numbers\n" +
+                "\n" +
+                "Trig - COS = Calculates the cosine of a given number"+
+                "\n" +
+                "\nInfo - PS = Check if the number is a perfect square" +
+                "\n"+
+                "\nInfo - PI = List the numbers of PI" +
+                "\n" +
+                "\nInfo - RNG = Random Number Generator" + ANSI_RESET);
+
     }
 }
