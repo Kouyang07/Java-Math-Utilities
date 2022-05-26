@@ -13,8 +13,22 @@ public class trigonometryMethods {
     static Scanner sc = new Scanner(System.in);
 
     static void cos(){
-        System.out.println(ANSI_PURPLE + "Enter the number you want the find the COS of" + ANSI_RESET);
-        double degrees = sc.nextInt();
+        boolean valid = false;
+        double degrees = 0.0;
+        while (!valid) {
+            System.out.println(ANSI_PURPLE + "Enter the number you want the find the COS of" + ANSI_RESET);
+            try {
+                degrees = sc.nextDouble();
+                valid = true;
+                // catches the mismatch exception, so it will only take int input. If letter
+                // return Not a number
+            } catch (InputMismatchException e) {
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
+                sc.next();
+            }
+        }
+
+
         double radians = Math.toRadians(degrees);
 
         System.out.format("The value of pi is %.4f%n", Math.PI);

@@ -28,7 +28,7 @@ public class misc {
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
                 sc.next();
             }
         }
@@ -44,10 +44,29 @@ public class misc {
     static void RNG() {
         int highest = 0;
         int total = 0;
-        System.out.println(ANSI_PURPLE + "Enter the amount of numbers you want to generate" + ANSI_RESET);
-        total = sc.nextInt();
-        System.out.println(ANSI_PURPLE + "Enter the highest number(1-x)" + ANSI_RESET);
-        highest = sc.nextInt();
+        boolean valid = false;
+        try {
+            System.out.println(ANSI_PURPLE + "Enter the amount of numbers you want to generate" + ANSI_RESET);
+            total = sc.nextInt();
+            valid = true;
+            // catches the mismatch exception, so it will only take int input. If letter
+            // return Not a number
+        } catch (InputMismatchException e) {
+            System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
+            sc.next();
+        }
+        try {
+            System.out.println(ANSI_PURPLE + "Enter the highest number(1-x)" + ANSI_RESET);
+            highest = sc.nextInt();
+            valid = true;
+            // catches the mismatch exception, so it will only take int input. If letter
+            // return Not a number
+        } catch (InputMismatchException e) {
+            System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
+            sc.next();
+        }
+
+
         Random num = new Random();
         int res = 0;
         for (int i = 1; i <= total; i++) {

@@ -29,7 +29,7 @@ public class algebraMethods {
                 // catches the mismatch exception so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
                 sc.next();
             }
         }
@@ -59,7 +59,7 @@ public class algebraMethods {
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
                 sc.next();
             }
             System.out.println(ANSI_CYAN + "\nEnter the second number you want to find the GCF of" + ANSI_RESET);
@@ -94,7 +94,7 @@ public class algebraMethods {
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
                 sc.next();
             }
         }
@@ -117,7 +117,7 @@ public class algebraMethods {
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
                 sc.next();
             }
             try {
@@ -127,7 +127,7 @@ public class algebraMethods {
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
                 sc.next();
             }
             try {
@@ -137,7 +137,7 @@ public class algebraMethods {
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
                 sc.next();
             }
             double d = b * b - 4.0 * a * c;
@@ -168,7 +168,7 @@ public class algebraMethods {
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
                 sc.next();
             }
             try {
@@ -202,7 +202,7 @@ public class algebraMethods {
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
                 sc.next();
             }
         }
@@ -227,7 +227,7 @@ public class algebraMethods {
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
                 sc.next();
             }
         }
@@ -238,46 +238,20 @@ public class algebraMethods {
 
     static void SC() {
         // stores two numbers
-        double num1 = 0.0;
-        double num2 = 0.0;
-        boolean valid = false;
-        char op = 0;
-        while (!valid) {
-            try {
-                System.out.println("Enter the first number");
-                num1 = sc.nextInt();
-                valid = true;
-                // catches the mismatch exception so it will only take int input. If letter
-                // return Not a number
-            } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
-                sc.next();
-            }
-        }
-        while (!valid) {
-            try {
-                System.out.println("Enter the second number");
-                num2 = sc.nextInt();
-                valid = true;
-                // catches the mismatch exception so it will only take int input. If letter
-                // return Not a number
-            } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
-                sc.next();
-            }
-        }
-        while (!valid) {
-            try {
-                System.out.println("Enter the operator (+,-,*,/)");
-                op = sc.next().charAt(0);
-                valid = true;
-                // catches the mismatch exception so it will only take int input. If letter
-                // return Not a number
-            } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
-                sc.next();
-            }
-        }
+        double num1, num2;
+
+        System.out.println("Enter the first number");
+
+        // take the inputs
+        num1 = sc.nextDouble();
+
+        System.out.println("Enter the second number");
+
+        num2 = sc.nextDouble();
+
+        System.out.println("Enter the operator (+,-,*,/)");
+
+        char op = sc.next().charAt(0);
 
         double o = 0;
 
@@ -344,8 +318,8 @@ public class algebraMethods {
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
-                return;
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
+                sc.next();
             }
             System.out
                     .println(ANSI_CYAN + "\nEnter the first term of the dot(No exponent or variable, number only)" + ANSI_RESET);
@@ -355,8 +329,8 @@ public class algebraMethods {
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
-                return;
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
+                sc.next();
             }
             try {
                 System.out
@@ -366,8 +340,8 @@ public class algebraMethods {
                 // catches the mismatch exception, so it will only take int input. If letter
                 // return Not a number
             } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
-                return;
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
+                sc.next();
             }
         }
         //calculation

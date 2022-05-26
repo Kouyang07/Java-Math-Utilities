@@ -4,6 +4,12 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) {
-       controllerMethods.mainMethod();
+        boolean valid = false;
+        try {
+            controllerMethods.mainMethod();
+        } catch (IllegalArgumentException e) {
+            controllerMethods.mainMethod();
+        }
+
     }
 }

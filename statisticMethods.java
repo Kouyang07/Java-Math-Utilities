@@ -41,8 +41,21 @@ public class statisticMethods {
     }
 
     static void standardDeviation() {
-        System.out.println("Enter the total amount of numbers you want to find the mean and SD for");
-        int n=sc.nextInt();
+        boolean valid = false;
+        int n = 0;
+        while (!valid) {
+            System.out.println("Enter the total amount of numbers you want to find the mean and SD for");
+            try {
+                n=sc.nextInt();
+                valid = true;
+                // catches the mismatch exception, so it will only take int input. If letter
+                // return Not a number
+            } catch (InputMismatchException e) {
+                System.out.println("Not a number.");
+                sc.next();
+            }
+        }
+
         double[] input=new double[n];
         double sum=0,mean;
         System.out.println("enter " + n + " numbers");
@@ -52,7 +65,7 @@ public class statisticMethods {
             sum=sum+input[i];
         }
         mean=sum/n;
-        System.out.println("Mean :"+mean);
+        System.out.println("Mean: "+mean);
         sum=0;
         for(int i=0;i<n;i++)
         {
@@ -60,7 +73,7 @@ public class statisticMethods {
         }
         mean=sum/(n-1);
         double deviation=Math.sqrt(mean);
-        System.out.println("standard deviation :"+deviation);
+        System.out.println("standard deviation: "+deviation);
     }
 
 }

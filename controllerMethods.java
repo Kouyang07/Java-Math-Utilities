@@ -49,31 +49,31 @@ public class controllerMethods {
             if (answer.equalsIgnoreCase("Factor")) {
                 algebraMethods.factorFinder();
             }
-            if (answer.equalsIgnoreCase("GCF")) {
+            else if (answer.equalsIgnoreCase("GCF")) {
                 algebraMethods.GCFfinder();
             }
-            if (answer.equalsIgnoreCase("SQR")) {
+            else if (answer.equalsIgnoreCase("SQR")) {
                 algebraMethods.squareRoot();
             }
-            if (answer.equalsIgnoreCase("Expo")) {
+            else if (answer.equalsIgnoreCase("Expo")) {
                 algebraMethods.exponent();
             }
-            if (answer.equalsIgnoreCase("Quad")) {
+            else if (answer.equalsIgnoreCase("Quad")) {
                 algebraMethods.quadratic();
             }
-            if (answer.equalsIgnoreCase("Fac")) {
+            else if (answer.equalsIgnoreCase("Fac")) {
                 algebraMethods.Fac();
             }
-            if (answer.equalsIgnoreCase("CR")) {
+            else if (answer.equalsIgnoreCase("CR")) {
                 algebraMethods.CR();
             }
-            if (answer.equalsIgnoreCase("SC")) {
+            else if (answer.equalsIgnoreCase("SC")) {
                 algebraMethods.SC();
             }
-            if (answer.equalsIgnoreCase("DOTS")) {
+            else if (answer.equalsIgnoreCase("DOTS")) {
                 algebraMethods.DOTS();
             }
-            if (answer.equalsIgnoreCase("Main")) {
+            else if (answer.equalsIgnoreCase("Main")) {
                 mainMethod();
             }
             else {
@@ -90,11 +90,13 @@ public class controllerMethods {
             if (answer.equalsIgnoreCase("avg")){
                 statisticMethods.average();
             }
-            if (answer.equalsIgnoreCase("MSD")){
+            else if (answer.equalsIgnoreCase("MSD")){
                 statisticMethods.standardDeviation();
             }
-            if (answer.equalsIgnoreCase("Main")){
+            else if (answer.equalsIgnoreCase("Main")){
                 mainMethod();
+            } else {
+                System.out.println(ANSI_RED + "\nThe choice you entered is invalid. Pick one from below" + ANSI_RESET);
             }
         } while (true);
     }
@@ -106,11 +108,13 @@ public class controllerMethods {
             if (answer.equalsIgnoreCase("cos")){
                 trigonometryMethods.cos();
             }
-            if (answer.equalsIgnoreCase("MSD")){
+            else if (answer.equalsIgnoreCase("MSD")){
                 statisticMethods.standardDeviation();
             }
-            if (answer.equalsIgnoreCase("Main")){
+            else if (answer.equalsIgnoreCase("Main")){
                 mainMethod();
+            } else {
+                System.out.println(ANSI_RED + "\nThe choice you entered is invalid. Pick one from below" + ANSI_RESET);
             }
         } while (true);
     }
@@ -130,6 +134,8 @@ public class controllerMethods {
             }
             if (answer.equalsIgnoreCase("RNG")) {
                 misc.RNG();
+            } else {
+                System.out.println(ANSI_RED + "\nThe choice you entered is invalid. Pick one from below" + ANSI_RESET);
             }
         } while (true);
     }
