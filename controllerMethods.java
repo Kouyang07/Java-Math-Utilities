@@ -167,11 +167,11 @@ public class controllerMethods {
                 "\n" +
                 "Trig - COS = Calculates the cosine of a given number"+
                 "\n" +
-                "\nInfo - PS = Check if the number is a perfect square" +
+                "\nMisc - PS = Check if the number is a perfect square" +
                 "\n"+
-                "\nInfo - PI = List the numbers of PI" +
+                "\nMisc - PI = List the numbers of PI" +
                 "\n" +
-                "\nInfo - RNG = Random Number Generator" + ANSI_RESET);
+                "\nMisc - RNG = Random Number Generator" + ANSI_RESET);
 
     }
 }
