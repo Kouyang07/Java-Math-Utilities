@@ -101,32 +101,6 @@ public class algebraMethods {
         System.out.println(Math.sqrt(sqMain));
     }
 
-    static void PerfectSquare() {
-        int num2check = 0;
-        boolean valid = false;
-
-        while (!valid) {
-            System.out
-                    .println(ANSI_CYAN + "\nEnter the number you want to check if square root(Numbers only)" + ANSI_RESET);
-            try {
-                num2check = sc.nextInt();
-                valid = true;
-                // catches the mismatch exception, so it will only take int input. If letter
-                // return Not a number
-            } catch (InputMismatchException e) {
-                System.out.println("Not a number.");
-                sc.next();
-            }
-        }
-        // main check
-        int sqrt = (int) Math.sqrt(num2check);
-        if (sqrt * sqrt == num2check) {
-            System.out.println(ANSI_GREEN + num2check + " is a perfect square number! Its square is " + sqrt + ANSI_RESET);
-        } else {
-            System.out.println(ANSI_GREEN + num2check + " is NOT a perfect square number!" + ANSI_RESET);
-        }
-    }
-
     static void quadratic() {
         boolean valid = false;
         double a = 0;

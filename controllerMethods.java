@@ -17,7 +17,7 @@ public class controllerMethods {
         do {
             System.out.println(
                     ANSI_PURPLE + "Do you want statics mode or algebra mode?" + "\nAlgebra = Sets of calculator for Algebra problems"
-                            + "\nStat = Sets of statistic calculators" + "\nTrig = Sets of Trigonometry calculators" + ANSI_RESET);
+                            + "\nStat = Sets of statistic calculators" + "\nTrig = Sets of Trigonometry calculators" + "\nInfo = Information on stuff you probably can't remember" + ANSI_RESET);
             String mainChoice = sc.nextLine();
             if (mainChoice.equalsIgnoreCase("Algebra")) {
                 algebraMethods();
@@ -25,8 +25,10 @@ public class controllerMethods {
                 statisticMethods();
             } else if (mainChoice.equalsIgnoreCase("trig")){
                 trigonometryMethods();
+            } else if (mainChoice.equalsIgnoreCase("Info")) {
+                infoChecks();
             } else {
-                System.out.println("The choices you entered is invalid. Pick Algebra or Stat or Trig");
+                System.out.println("The choices you entered is invalid. Pick Algebra or Stat or Trig or Info");
             }
         } while (true);
     }
@@ -44,27 +46,18 @@ public class controllerMethods {
             // if the input is y, set repeat program to true otherwise exit
             if (answer.equalsIgnoreCase("Factor")) {
                 algebraMethods.factorFinder();
-                repeat = true;
             }
             if (answer.equalsIgnoreCase("GCF")) {
                 algebraMethods.GCFfinder();
-                repeat = true;
             }
             if (answer.equalsIgnoreCase("SQR")) {
                 algebraMethods.squareRoot();
-                repeat = true;
-            }
-            if (answer.equalsIgnoreCase("PS")) {
-                algebraMethods.PerfectSquare();
-                repeat = true;
             }
             if (answer.equalsIgnoreCase("Expo")) {
                 algebraMethods.exponent();
-                repeat = true;
             }
             if (answer.equalsIgnoreCase("Quad")) {
                 algebraMethods.quadratic();
-                repeat = true;
             }
             if (answer.equalsIgnoreCase("Fac")) {
                 algebraMethods.Fac();
@@ -113,6 +106,22 @@ public class controllerMethods {
             }
             if (answer.equalsIgnoreCase("MSD")){
                 statisticMethods.standardDeviation();
+            }
+            if (answer.equalsIgnoreCase("Main")){
+                mainMethod();
+            }
+        } while (true);
+    }
+
+    static void infoChecks() {
+        do {
+            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Avg)" + "\nPI = Shows PI" + "\nPS = Checks if a number is perfect square"+ ANSI_RESET);
+            String answer = sc.nextLine();
+            if (answer.equalsIgnoreCase("PI")){
+                infoChecks.pi();
+            }
+            if (answer.equalsIgnoreCase("PS")){
+                infoChecks.PerfectSquare();
             }
             if (answer.equalsIgnoreCase("Main")){
                 mainMethod();
