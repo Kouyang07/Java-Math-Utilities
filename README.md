@@ -27,8 +27,8 @@ Stat - MSD = Calculates the mean and the average deviation of a set of numbers
 
 Trig - COS = Calculates the cosine of a given number
 
-Info - PS = Check if the number is a perfect square
+Misc - PS = Check if the number is a perfect square
 
-Info - PI = List the numbers of PI
+Misc - PI = List the numbers of PI
 
-Info - RNG = Random Number Generator
+Misc - RNG = Random Number Generator
