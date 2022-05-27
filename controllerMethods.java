@@ -95,7 +95,11 @@ public class controllerMethods {
             }
             else if (answer.equalsIgnoreCase("Main")){
                 mainMethod();
-            } else {
+            }
+            else if (answer.equalsIgnoreCase("Outliers")){
+                statisticMethods.outliers();
+            }
+            else {
                 System.out.println(ANSI_RED + "\nThe choice you entered is invalid. Pick one from below" + ANSI_RESET);
             }
         } while (true);
@@ -113,7 +117,8 @@ public class controllerMethods {
             }
             else if (answer.equalsIgnoreCase("Main")){
                 mainMethod();
-            } else {
+            }
+            else {
                 System.out.println(ANSI_RED + "\nThe choice you entered is invalid. Pick one from below" + ANSI_RESET);
             }
         } while (true);
@@ -126,13 +131,13 @@ public class controllerMethods {
             if (answer.equalsIgnoreCase("PI")){
                 misc.pi();
             }
-            if (answer.equalsIgnoreCase("PS")){
+            else if (answer.equalsIgnoreCase("PS")){
                 misc.PerfectSquare();
             }
-            if (answer.equalsIgnoreCase("Main")){
+            else if (answer.equalsIgnoreCase("Main")){
                 mainMethod();
             }
-            if (answer.equalsIgnoreCase("RNG")) {
+            else if (answer.equalsIgnoreCase("RNG")) {
                 misc.RNG();
             } else {
                 System.out.println(ANSI_RED + "\nThe choice you entered is invalid. Pick one from below" + ANSI_RESET);

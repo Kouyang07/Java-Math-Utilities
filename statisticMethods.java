@@ -1,6 +1,5 @@
 import java.util.*;
 import java.lang.*;
-import java.io.*;
 
 public class statisticMethods {
     public static final String ANSI_RESET = "\u001B[0m";
@@ -76,4 +75,32 @@ public class statisticMethods {
         System.out.println("standard deviation: "+deviation);
     }
 
-}
+    static void outliers(){
+
+        int total = 0;
+        int medianSize = 0;
+        double median = 0;
+        double Q1 = 0;
+        double Q2 = 0;
+        double Q2E = 0;
+        double Q3 = 0;
+        double Q4 = 0;
+
+
+        List<Double> data = new ArrayList<Double>();
+        System.out.println("Enter the total amount of numbers you have in your data set");
+        total = sc.nextInt();
+        for(int i = 0; i<total;i++){
+            data.add(sc.nextDouble());
+        }
+        Collections.sort(data);
+        System.out.println(data);
+
+        if (data.size() % 2 == 0)
+            median = ((double)data.get(data.size()/2) + (double)data.get(data.size()/2 - 1))/2;
+        else
+            median = (double)data.get(data.size()/2);
+
+        System.out.println("Median :"+median);
+    }
+    }
