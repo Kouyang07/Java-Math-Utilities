@@ -85,19 +85,13 @@ public class controllerMethods {
 
     static void statisticMethods() {
         do {
-            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Avg)" + "\nAvg = Find the factor of a set of number" + "\nMSD = Calculates the mean and the standard deviation of a set of numbers" + "\nMain = Return to the main menu"+ ANSI_RESET);
+            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Stat)" + "\nStat = Finds the common information of a data set" + "\nMain = Return to the main menu"+ ANSI_RESET);
             String answer = sc.nextLine();
-            if (answer.equalsIgnoreCase("avg")){
-                statisticMethods.average();
-            }
-            else if (answer.equalsIgnoreCase("MSD")){
-                statisticMethods.standardDeviation();
-            }
-            else if (answer.equalsIgnoreCase("Main")){
+            if (answer.equalsIgnoreCase("Main")){
                 mainMethod();
             }
-            else if (answer.equalsIgnoreCase("Outliers")){
-                statisticMethods.outliers();
+            else if (answer.equalsIgnoreCase("stat")){
+                statisticMethods.generalStat();
             }
             else {
                 System.out.println(ANSI_RED + "\nThe choice you entered is invalid. Pick one from below" + ANSI_RESET);
@@ -111,9 +105,6 @@ public class controllerMethods {
             String answer = sc.nextLine();
             if (answer.equalsIgnoreCase("cos")){
                 trigonometryMethods.cos();
-            }
-            else if (answer.equalsIgnoreCase("MSD")){
-                statisticMethods.standardDeviation();
             }
             else if (answer.equalsIgnoreCase("Main")){
                 mainMethod();
