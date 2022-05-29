@@ -157,17 +157,15 @@ public class controllerMethods {
                 "\n" +
                 "Algebra - DOTS = Difference Between Two Squares\n" +
                 "\n" +
-                "Stat - AVG = The average of a set of numbers\n" +
+                "Stat - Stat = Finds the common values of a set of data(IQR, outliers, stdev, etc)\n" +
                 "\n" +
-                "Stat - MSD = Calculates the mean and the average deviation of a set of numbers\n" +
+                "Trig - COS = Calculates the cosine of a given number\n" +
                 "\n" +
-                "Trig - COS = Calculates the cosine of a given number"+
+                "Misc - PS = Check if the number is a perfect square\n" +
                 "\n" +
-                "\nMisc - PS = Check if the number is a perfect square" +
-                "\n"+
-                "\nMisc - PI = List the numbers of PI" +
+                "Misc - PI = List the numbers of PI\n" +
                 "\n" +
-                "\nMisc - RNG = Random Number Generator" + ANSI_RESET);
+                "Misc - RNG = Random Number Generator" + ANSI_RESET);
 
     }
 }
