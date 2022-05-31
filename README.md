@@ -25,6 +25,8 @@ Stat - Stat = Finds the common values of a set of data(IQR, outliers, stdev, etc
 
 Trig - COS = Calculates the cosine of a given number
 
+Trig - PT = Calculates the hypotenuse using the pythagorean theorem
+
 Misc - PS = Check if the number is a perfect square
 
 Misc - PI = List the numbers of PI
