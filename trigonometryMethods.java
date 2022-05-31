@@ -34,4 +34,43 @@ public class trigonometryMethods {
         System.out.format("The value of pi is %.4f%n", Math.PI);
         System.out.format("The cosine of %.1f degrees is %.4f%n", degrees, Math.cos(radians));
     }
+
+    static void PT(){
+        double firstS = 0;
+        double secondS = 0;
+        double hypotenuse = 0;
+        boolean valid = false;
+        double fBase = 0;
+        double sBase = 0;
+
+        while (!valid) {
+            try {
+                System.out.println(ANSI_PURPLE + "Enter the first leg of the triangle" + ANSI_RESET);
+                fBase = sc.nextDouble();
+                valid = true;
+                // catches the mismatch exception, so it will only take int input. If letter
+                // return Not a number
+            } catch (InputMismatchException e) {
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
+                sc.next();
+            }
+            try {
+                System.out.println(ANSI_PURPLE + "Enter the second leg of the triangle" + ANSI_RESET);
+                sBase = sc.nextDouble();
+                valid = true;
+                // catches the mismatch exception, so it will only take int input. If letter
+                // return Not a number
+            } catch (InputMismatchException e) {
+                System.out.println(ANSI_RED + "Not a number." + ANSI_RESET);
+                sc.next();
+            }
+        }
+
+        firstS = fBase * fBase;
+        secondS = sBase * sBase;
+        hypotenuse = Math.sqrt(firstS + secondS);
+
+        System.out.println(ANSI_GREEN + "The hypotenus of " + fBase + " and " + sBase + " is " + hypotenuse + ANSI_RESET);
+
+    }
 }

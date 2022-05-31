@@ -101,13 +101,17 @@ public class controllerMethods {
 
     static void trigonometryMethods() {
         do {
-            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Avg)" + "\nCOS = Finds the cosine of the specified value." + "\nMain = Return to the main menu"+ ANSI_RESET);
+            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Avg)" +
+                    "\nCOS = Finds the cosine of the specified value." + "\nPT = Calculates the hypotenuse using the pythagorean theorem" + "\nMain = Return to the main menu"+ ANSI_RESET);
             String answer = sc.nextLine();
             if (answer.equalsIgnoreCase("cos")){
                 trigonometryMethods.cos();
             }
             else if (answer.equalsIgnoreCase("Main")){
                 mainMethod();
+            }
+            else if (answer.equalsIgnoreCase("PT")){
+                trigonometryMethods.PT();
             }
             else {
                 System.out.println(ANSI_RED + "\nThe choice you entered is invalid. Pick one from below" + ANSI_RESET);
@@ -117,7 +121,7 @@ public class controllerMethods {
 
     static void misc() {
         do {
-            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Avg/PI/PS/RNG)" + "\nPI = Shows PI" + "\nPS = Checks if a number is perfect square"+ "\nRNG = Random Number Generator" + "\nMain = Return to the main menu" + ANSI_RESET);
+            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Avg/PI/PS/RNG)" + "\nPI = Shows PI" + "\nPS = Checks if a number is perfect square"+ "\nRNG = Random Number Generator" + "\nMain = Return to the main menu" + "\nLEM = Represent linear equation in matrix form"+ ANSI_RESET);
             String answer = sc.nextLine();
             if (answer.equalsIgnoreCase("PI")){
                 misc.pi();
@@ -130,7 +134,11 @@ public class controllerMethods {
             }
             else if (answer.equalsIgnoreCase("RNG")) {
                 misc.RNG();
-            } else {
+            }
+            else if (answer.equalsIgnoreCase("LEM")) {
+                misc.LEM();
+            }
+            else {
                 System.out.println(ANSI_RED + "\nThe choice you entered is invalid. Pick one from below" + ANSI_RESET);
             }
         } while (true);
@@ -161,11 +169,14 @@ public class controllerMethods {
                 "\n" +
                 "Trig - COS = Calculates the cosine of a given number\n" +
                 "\n" +
+                "Trig - PT = Calculates the hypotenuse using the pythagorean theorem\n" +
+                "\n" +
                 "Misc - PS = Check if the number is a perfect square\n" +
                 "\n" +
                 "Misc - PI = List the numbers of PI\n" +
                 "\n" +
-                "Misc - RNG = Random Number Generator" + ANSI_RESET);
+                "Misc - RNG = Random Number Generator"
+                + ANSI_RESET);
 
     }
 }

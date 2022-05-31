@@ -349,4 +349,4 @@ public class algebraMethods {
         double term2f = Math.sqrt(term2);
         System.out.println(ANSI_GREEN + "(" + numVari + "+" + term1f + ")" + "(" + numVari + "-" + term2f + ")" + ANSI_RESET);
     }
-    }
+}

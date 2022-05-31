@@ -93,9 +93,9 @@ public class statisticMethods {
                 "\nMedian is " + median + "\nQ1 is " + Q1 + "\nQ3 is " + Q3 + "\nIQR is " + IQR + "\nLower fence is " + lowerFence +
                 "\nUpper fence is " + upperFence + "\nRange is " + range);
         if(output.size() < 1){
-        System.out.println(ANSI_RED + "There are no outliers" + ANSI_RESET);
-    }else{
-        System.out.println(ANSI_GREEN + "The outliers are " + output + ANSI_RESET);
+            System.out.println(ANSI_RED + "There are no outliers" + ANSI_RESET);
+        }else{
+            System.out.println(ANSI_GREEN + "The outliers are " + output + ANSI_RESET);
         }
     }
 }
