@@ -1,6 +1,4 @@
 import java.util.*;
-import java.lang.*;
-import java.io.*;
 
 public class Main {
     public static final String ANSI_RESET = "\u001B[0m";
@@ -11,7 +9,6 @@ public class Main {
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
     public static void main(String[] args) {
-        boolean valid = false;
         try {
             controllerMethods.mainMethod();
         } catch (IllegalArgumentException e) {

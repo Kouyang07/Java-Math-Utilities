@@ -1,5 +1,8 @@
-import java.util.*;
-import java.lang.*;
+import Algebra.*;
+import Statistics.*;
+import Trigonometry.*;
+import Misc.*;
+import java.util.Scanner;
 
 public class controllerMethods {
     public static final String ANSI_RESET = "\u001B[0m";
@@ -16,7 +19,7 @@ public class controllerMethods {
         do {
             System.out.println(
                     ANSI_PURPLE + "Do you want statics mode or algebra mode?" + "\nAlgebra = Sets of calculator for Algebra problems"
-                            + "\nStat = Sets of statistic calculators" + "\nTrig = Sets of Trigonometry calculators" + "\nMisc = Random misc stuff" + "\nList = If you want to list all of the methods that are available"+ ANSI_RESET);
+                            + "\nStat = Sets of statistic calculators" + "\nTrig = Sets of Trigonometry calculators" + "\nMisc = Random BaiscFunctions.misc stuff" + "\nList = If you want to list all of the methods that are available"+ ANSI_RESET);
             String mainChoice = sc.nextLine();
             if (mainChoice.equalsIgnoreCase("Algebra")) {
                 algebraMethods();
@@ -36,42 +39,42 @@ public class controllerMethods {
     }
     static void algebraMethods() {
         do {
-            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Factor/GCF/SQR/PS/Quad/CR/SC/DOTS)"
-                    + "\nFactor = Find the factor of a number" + "\nGCF = Find the greatest common factor of a number"
-                    + "\nSQR = Find the square root of a number" + "\nPS = Check if the number is a perfect square and return the square root"
-                    + "\nQuad = Solve a quadratic equation" + "\nExpo = Evaluate the given exponent"
+            System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Factor/GCF/SQR/PS/Quad/CR/DOTS)"
+                    + "\nFactor = Find the factor of a number"
+                    + "\nGCF = Find the greatest common factor of a number"
+                    + "\nSQR = Find the square root of a number"
+                    + "\nPS = Check if the number is a perfect square and return the square root"
+                    + "\nQuad = Solve a quadratic equation"
+                    + "\nExpo = Evaluate the given exponent"
                     + "\nFac = Factorial of a given number"
-                    + "\nCR = Cube root of a given number" + "\nSC = Simple calculator to calculate simple 2 term equations"
+                    + "\nCR = Cube root of a given number"
                     + "\nDOTS = Difference Between Two Squares"
                     + "\nMain = Return to the main menu" + ANSI_RESET);
             String answer = sc.nextLine();
             // if the input is y, set repeat program to true otherwise exit
             if (answer.equalsIgnoreCase("Factor")) {
-                algebraMethods.factorFinder();
+                factorFinder.factorFinder();
             }
             else if (answer.equalsIgnoreCase("GCF")) {
-                algebraMethods.GCFfinder();
+                GCFfinder.GCFfinder();
             }
             else if (answer.equalsIgnoreCase("SQR")) {
-                algebraMethods.squareRoot();
+                squareRoot.squareRoot();
             }
             else if (answer.equalsIgnoreCase("Expo")) {
-                algebraMethods.exponent();
+                exponent.exponent();
             }
             else if (answer.equalsIgnoreCase("Quad")) {
-                algebraMethods.quadratic();
+                quadratic.quadratic();
             }
             else if (answer.equalsIgnoreCase("Fac")) {
-                algebraMethods.Fac();
+                Fac.Fac();
             }
             else if (answer.equalsIgnoreCase("CR")) {
-                algebraMethods.CR();
-            }
-            else if (answer.equalsIgnoreCase("SC")) {
-                algebraMethods.SC();
+                CR.CR();
             }
             else if (answer.equalsIgnoreCase("DOTS")) {
-                algebraMethods.DOTS();
+                DOTS.DOTS();
             }
             else if (answer.equalsIgnoreCase("Main")) {
                 mainMethod();
@@ -91,7 +94,7 @@ public class controllerMethods {
                 mainMethod();
             }
             else if (answer.equalsIgnoreCase("stat")){
-                statisticMethods.generalStat();
+                generalStat.generalStat();
             }
             else {
                 System.out.println(ANSI_RED + "\nThe choice you entered is invalid. Pick one from below" + ANSI_RESET);
@@ -105,13 +108,13 @@ public class controllerMethods {
                     "\nCOS = Finds the cosine of the specified value." + "\nPT = Calculates the hypotenuse using the pythagorean theorem" + "\nMain = Return to the main menu"+ ANSI_RESET);
             String answer = sc.nextLine();
             if (answer.equalsIgnoreCase("cos")){
-                trigonometryMethods.cos();
+                cos.cos();
             }
             else if (answer.equalsIgnoreCase("Main")){
                 mainMethod();
             }
             else if (answer.equalsIgnoreCase("PT")){
-                trigonometryMethods.PT();
+                PT.PT();
             }
             else {
                 System.out.println(ANSI_RED + "\nThe choice you entered is invalid. Pick one from below" + ANSI_RESET);
@@ -124,19 +127,19 @@ public class controllerMethods {
             System.out.println(ANSI_PURPLE + "Which tool do you want to use? (Avg/PI/PS/RNG)" + "\nPI = Shows PI" + "\nPS = Checks if a number is perfect square"+ "\nRNG = Random Number Generator" + "\nMain = Return to the main menu" + "\nLEM = Represent linear equation in matrix form"+ ANSI_RESET);
             String answer = sc.nextLine();
             if (answer.equalsIgnoreCase("PI")){
-                misc.pi();
+                PI.pi();
             }
             else if (answer.equalsIgnoreCase("PS")){
-                misc.PerfectSquare();
+                perfectSquare.PerfectSquare();
             }
             else if (answer.equalsIgnoreCase("Main")){
                 mainMethod();
             }
             else if (answer.equalsIgnoreCase("RNG")) {
-                misc.RNG();
+                RNG.RNG();
             }
             else if (answer.equalsIgnoreCase("LEM")) {
-                misc.LEM();
+                LEM.LEM();
             }
             else {
                 System.out.println(ANSI_RED + "\nThe choice you entered is invalid. Pick one from below" + ANSI_RESET);
