@@ -21,11 +21,11 @@ Algebra - SC = Simple calculator to calculate simple 2 term equations
 
 Algebra - DOTS = Difference Between Two Squares
 
-Stat - Stat = Finds the common values of a set of data(IQR, outliers, stdev, etc)
+Statistics - Stat = Finds the common values of a set of data(IQR, outliers, stdev, etc)
 
-Trig - COS = Calculates the cosine of a given number
+Trigonometry - COS = Calculates the cosine of a given number
 
-Trig - PT = Calculates the hypotenuse using the pythagorean theorem
+Trigonometry - PT = Calculates the hypotenuse using the pythagorean theorem
 
 Misc - PS = Check if the number is a perfect square
 
