@@ -76,6 +76,9 @@ public class controllerMethods {
             else if (answer.equalsIgnoreCase("DOTS")) {
                 DOTS.DOTS();
             }
+            else if (answer.equalsIgnoreCase("foil")) {
+                foil.foil();
+            }
             else if (answer.equalsIgnoreCase("Main")) {
                 mainMethod();
             }
@@ -168,11 +171,11 @@ public class controllerMethods {
                 "\n" +
                 "Algebra - DOTS = Difference Between Two Squares\n" +
                 "\n" +
-                "Stat - Stat = Finds the common values of a set of data(IQR, outliers, stdev, etc)\n" +
+                "Statistics - Stat = Finds the common values of a set of data(IQR, outliers, stdev, etc)\n" +
                 "\n" +
-                "Trig - COS = Calculates the cosine of a given number\n" +
+                "Trigonometry - COS = Calculates the cosine of a given number\n" +
                 "\n" +
-                "Trig - PT = Calculates the hypotenuse using the pythagorean theorem\n" +
+                "Trigonometry - PT = Calculates the hypotenuse using the pythagorean theorem\n" +
                 "\n" +
                 "Misc - PS = Check if the number is a perfect square\n" +
                 "\n" +
