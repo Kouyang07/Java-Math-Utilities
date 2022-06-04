@@ -21,6 +21,8 @@ Algebra - SC = Simple calculator to calculate simple 2 term equations
 
 Algebra - DOTS = Difference Between Two Squares
 
+Algebra - RFOIL = Factors a quadratic expression through reverse foil
+
 Statistics - Stat = Finds the common values of a set of data(IQR, outliers, stdev, etc)
 
 Trigonometry - COS = Calculates the cosine of a given number
