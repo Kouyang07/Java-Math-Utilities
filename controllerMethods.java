@@ -49,7 +49,9 @@ public class controllerMethods {
                     + "\nFac = Factorial of a given number"
                     + "\nCR = Cube root of a given number"
                     + "\nDOTS = Difference Between Two Squares"
-                    + "\nMain = Return to the main menu" + ANSI_RESET);
+                    + "\nRFOIL = Factors a quadratic expression through reverse foil"
+                    + "\nMain = Return to the main menu"
+                    + ANSI_RESET);
             String answer = sc.nextLine();
             // if the input is y, set repeat program to true otherwise exit
             if (answer.equalsIgnoreCase("Factor")) {
@@ -76,7 +78,7 @@ public class controllerMethods {
             else if (answer.equalsIgnoreCase("DOTS")) {
                 DOTS.DOTS();
             }
-            else if (answer.equalsIgnoreCase("foil")) {
+            else if (answer.equalsIgnoreCase("rfoil")) {
                 foil.foil();
             }
             else if (answer.equalsIgnoreCase("Main")) {
@@ -171,6 +173,8 @@ public class controllerMethods {
                 "\n" +
                 "Algebra - DOTS = Difference Between Two Squares\n" +
                 "\n" +
+                "Algebra - RFOIL = Factors a quadratic expression through reverse foil\n" +
+                "\n" +
                 "Statistics - Stat = Finds the common values of a set of data(IQR, outliers, stdev, etc)\n" +
                 "\n" +
                 "Trigonometry - COS = Calculates the cosine of a given number\n" +
@@ -181,7 +185,7 @@ public class controllerMethods {
                 "\n" +
                 "Misc - PI = List the numbers of PI\n" +
                 "\n" +
-                "Misc - RNG = Random Number Generator"
+                "Misc - RNG = Random Number Generator\n"
                 + ANSI_RESET);
 
     }

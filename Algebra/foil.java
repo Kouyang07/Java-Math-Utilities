@@ -20,11 +20,12 @@ public class foil {
         int g = 0;
         ArrayList<Integer> factors = new ArrayList<Integer>();
 
-        System.out.println("Enter the number you want to factor");
-        product = sc.nextInt();
-
-        System.out.println("Enter the number the factors should add up to");
+        System.out.println("Enter B of the quadratic equation without the x");
         sum = sc.nextInt();
+
+        System.out.println("Enter the constant C");
+
+        product = sc.nextInt();
 
         if(product < 0){
             for(int i = product; i <= Math.abs(product); ++i) {
@@ -56,10 +57,10 @@ public class foil {
                 l = factors.get(i);
                 g = factors.get(k);
                 if(l+g==sum){
-                    System.out.println(l + "\n" + g);
+                    System.out.println(ANSI_GREEN + "(x + " + l + ")" + "( x + " + g + ")" + ANSI_RESET);
                 }
             }
         }
-
+        System.out.println(ANSI_RED + "If there are no output then it means the quadratic expression cannot be factored by reverse FOIL" + ANSI_RESET);
     }
 }
