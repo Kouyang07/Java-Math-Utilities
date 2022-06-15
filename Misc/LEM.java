@@ -13,16 +13,13 @@ public class LEM {
     static Scanner sc = new Scanner(System.in);
     public static void LEM(){
         // Initializing the variables
-        char[] variable
-                = { 'a', 'b', 'c', 'x', 'y', 'z', 'w' };
-        System.out.println("Enter the amount of variables");
+        char[] variable = { 'a', 'b', 'c', 'x', 'y', 'z', 'w' };
+        System.out.println(ANSI_CYAN + "Enter the amount of variables" + ANSI_RESET);
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
-        System.out.println(
-                "Enter the coefficients variable");
-        System.out.println(
-                "Enter in the format shown below");
-        System.out.println("ax + by + cz + ... = d");
+        System.out.println(ANSI_CYAN + "Enter the coefficients variable" + ANSI_RESET);
+        System.out.println(ANSI_CYAN + "Enter in the format shown below");
+        System.out.println("ax + by + cz + ... = d" + ANSI_RESET);
 
         // Input of coefficients from user
         int[][] matrix = new int[num][num];
@@ -35,8 +32,7 @@ public class LEM {
         }
         // Representation of linear equations in form of
         // matrix
-        System.out.println(
-                "The matrix representation of the equations you entered it: ");
+        System.out.println(ANSI_GREEN + "The matrix representation of the equations you entered it: ");
         for (int i = 0; i < num; i++) {
             for (int j = 0; j < num; j++) {
                 System.out.print(" " + matrix[i][j]);

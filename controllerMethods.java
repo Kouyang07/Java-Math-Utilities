@@ -19,11 +19,11 @@ public class controllerMethods {
         do {
             System.out.println(
                     ANSI_PURPLE + "Do you want statics mode or algebra mode?" + "\nAlgebra = Sets of calculator for Algebra problems"
-                            + "\nStat = Sets of statistic calculators" + "\nTrig = Sets of Trigonometry calculators" + "\nMisc = Random BaiscFunctions.misc stuff" + "\nList = If you want to list all of the methods that are available"+ ANSI_RESET);
+                            + "\nStat = Sets of statistic calculators" + "\nTrig = Sets of Trigonometry calculators" + "\nMisc = Random basic misc stuff" + "\nList = If you want to list all of the methods that are available"+ ANSI_RESET);
             String mainChoice = sc.nextLine();
             if (mainChoice.equalsIgnoreCase("Algebra")) {
                 algebraMethods();
-            } else if (mainChoice.equalsIgnoreCase("Stat")) {
+                } else if (mainChoice.equalsIgnoreCase("Stat")) {
                 statisticMethods();
             } else if (mainChoice.equalsIgnoreCase("trig")){
                 trigonometryMethods();

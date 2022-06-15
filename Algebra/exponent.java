@@ -42,7 +42,7 @@ public class exponent {
         }
         // main check
         result = (long) Math.pow(base, exponent);
-        System.out.println(ANSI_PURPLE + "result = " + result + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "result = " + result + ANSI_RESET);
 
     }
 }

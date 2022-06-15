@@ -19,7 +19,7 @@ public class RNG {
         int total = 0;
         boolean valid = false;
         try {
-            System.out.println(ANSI_PURPLE + "Enter the amount of numbers you want to generate" + ANSI_RESET);
+            System.out.println(ANSI_CYAN + "Enter the amount of numbers you want to generate" + ANSI_RESET);
             total = sc.nextInt();
             valid = true;
             // catches the mismatch exception, so it will only take int input. If letter
@@ -29,7 +29,7 @@ public class RNG {
             sc.next();
         }
         try {
-            System.out.println(ANSI_PURPLE + "Enter the highest number(1-x)" + ANSI_RESET);
+            System.out.println(ANSI_CYAN + "Enter the highest number(1-x)" + ANSI_RESET);
             highest = sc.nextInt();
             valid = true;
             // catches the mismatch exception, so it will only take int input. If letter

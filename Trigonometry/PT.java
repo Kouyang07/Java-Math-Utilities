@@ -23,7 +23,7 @@ public class PT {
 
         while (!valid) {
             try {
-                System.out.println(ANSI_PURPLE + "Enter the first leg of the triangle" + ANSI_RESET);
+                System.out.println(ANSI_CYAN + "Enter the first leg of the triangle" + ANSI_RESET);
                 fBase = sc.nextDouble();
                 valid = true;
                 // catches the mismatch exception, so it will only take int input. If letter
@@ -33,7 +33,7 @@ public class PT {
                 sc.next();
             }
             try {
-                System.out.println(ANSI_PURPLE + "Enter the second leg of the triangle" + ANSI_RESET);
+                System.out.println(ANSI_CYAN + "Enter the second leg of the triangle" + ANSI_RESET);
                 sBase = sc.nextDouble();
                 valid = true;
                 // catches the mismatch exception, so it will only take int input. If letter

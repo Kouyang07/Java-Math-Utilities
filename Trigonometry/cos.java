@@ -16,7 +16,7 @@ public class cos {
         boolean valid = false;
         double degrees = 0.0;
         while (!valid) {
-            System.out.println(ANSI_PURPLE + "Enter the number you want the find the COS of" + ANSI_RESET);
+            System.out.println(ANSI_CYAN + "Enter the number you want the find the COS of" + ANSI_RESET);
             try {
                 degrees = sc.nextDouble();
                 valid = true;
@@ -31,7 +31,7 @@ public class cos {
 
         double radians = Math.toRadians(degrees);
 
-        System.out.format("The value of pi is %.4f%n", Math.PI);
-        System.out.format("The cosine of %.1f degrees is %.4f%n", degrees, Math.cos(radians));
+        System.out.format(ANSI_GREEN + "The value of pi is %.4f%n", Math.PI);
+        System.out.format("The cosine of %.1f degrees is %.4f%n", degrees, Math.cos(radians) + ANSI_RESET);
     }
 }

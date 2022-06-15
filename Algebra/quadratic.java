@@ -20,8 +20,7 @@ public class quadratic {
         double c = 0;
 
         while (!valid) {
-            System.out.println(ANSI_CYAN
-                    + "\nEnter the A term of the quadratic equation(Numbers only ignore the X, exponent and signs)" + ANSI_RESET);
+            System.out.println(ANSI_CYAN + "\nEnter the A term of the quadratic equation(Numbers only ignore the X, exponent and signs)" + ANSI_RESET);
             try {
                 System.out.println("Enter term A");
                 a = sc.nextDouble();
@@ -33,7 +32,7 @@ public class quadratic {
                 sc.next();
             }
             try {
-                System.out.println("Enter term B");
+                System.out.println(ANSI_CYAN + "Enter term B" + ANSI_RESET);
                 b = sc.nextDouble();
                 valid = true;
                 // catches the mismatch exception, so it will only take int input. If letter
@@ -43,7 +42,7 @@ public class quadratic {
                 sc.next();
             }
             try {
-                System.out.println("Enter term C");
+                System.out.println(ANSI_CYAN + "Enter term C" + ANSI_RESET);
                 c = sc.nextDouble();
                 valid = true;
                 // catches the mismatch exception, so it will only take int input. If letter
@@ -56,12 +55,12 @@ public class quadratic {
             if (d > 0.0) {
                 double r1 = (-b + Math.pow(d, 0.5)) / (2.0 * a);
                 double r2 = (-b - Math.pow(d, 0.5)) / (2.0 * a);
-                System.out.println("The roots are " + r1 + " and " + r2);
+                System.out.println(ANSI_GREEN + "The roots are " + r1 + " and " + r2 + ANSI_RESET);
             } else if (d == 0.0) {
                 double r1 = -b / (2.0 * a);
-                System.out.println("The root is " + r1);
+                System.out.println(ANSI_GREEN + "The root is " + r1 + ANSI_RESET);
             } else {
-                System.out.println("Roots are not real.");
+                System.out.println(ANSI_GREEN + "Roots are not real." + ANSI_RESET);
             }
         }
     }

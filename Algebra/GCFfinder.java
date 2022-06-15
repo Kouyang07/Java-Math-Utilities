@@ -35,7 +35,7 @@ public class GCFfinder {
                 gcf2 = sc.nextInt();
                 valid = true;
             } catch (InputMismatchException e) {
-                System.out.println("Not a number");
+                System.out.println(ANSI_RED + "Not a number" + ANSI_RESET);
                 sc.next();
             }
         }
@@ -46,6 +46,6 @@ public class GCFfinder {
                 gcd = i;
         }
         // prints the gcd
-        System.out.printf("GCF of %d and %d is: %d", gcf1, gcf2, gcd);
+        System.out.printf(ANSI_GREEN + "GCF of %d and %d is: %d", gcf1, gcf2, gcd + ANSI_RESET);
     }
 }

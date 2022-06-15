@@ -28,7 +28,7 @@ public class generalStat {
 
 //Get the size of the array from the user
         List<Double> data = new ArrayList<>();
-        System.out.println(ANSI_PURPLE + "Enter the total amount of numbers you have in your data set");
+        System.out.println(ANSI_CYAN + "Enter the total amount of numbers you have in your data set");
         total = sc.nextInt();
         System.out.println("Enter " + total + " numbers" + ANSI_RESET);
         for (int i = 0; i < total; i++) {

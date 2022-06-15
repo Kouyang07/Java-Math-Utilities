@@ -20,10 +20,10 @@ public class foil {
         int g = 0;
         ArrayList<Integer> factors = new ArrayList<Integer>();
 
-        System.out.println("Enter B of the quadratic equation without the x");
+        System.out.println(ANSI_CYAN + "Enter B of the quadratic equation without the x" + ANSI_RESET);
         sum = sc.nextInt();
 
-        System.out.println("Enter the constant C");
+        System.out.println(ANSI_CYAN + "Enter the constant C" + ANSI_RESET);
 
         product = sc.nextInt();
 

@@ -29,6 +29,6 @@ public class squareRoot {
                 sc.next();
             }
         }
-        System.out.println(Math.sqrt(sqMain));
+        System.out.println(ANSI_GREEN + Math.sqrt(sqMain) + ANSI_RESET);
     }
 }
